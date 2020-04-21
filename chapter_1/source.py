@@ -143,3 +143,36 @@ A.flatten()  # vec演算子だな．画像認識でもまあ使った．
 
 
 
+import matplotlib.pyplot as plt
+
+
+
+x = np.arange(0, 6, 0.1)  # R の seq(0, 6, by=0.1)
+y = np.sin(x)  # R の sin(ベクトル)
+
+plt.plot(x, y)
+plt.show()  # VSCode の Python Interactive (Jupyter 呼び出し) では，これ実行しなくて良かった．
+
+
+
+y1 = np.sin(x)
+y2 = np.cos(x)
+
+plt.plot(x, y1, label="sin")
+plt.plot(x, y2, linestyle = "--", label="cos")
+plt.xlabel("x")
+plt.ylabel("y")
+plt.title("sin & cos")
+plt.legend()
+# 当然な気もするが，同じキャンパスに描画したいコマンドは同時に実行する必要ある．
+# ipynb なら同じセルに書いとけば良いから，楽．
+
+
+
+# 画像を読み込む関数．image モジュールは R の imager みたいな．
+from matplotlib.image import imread
+
+img = imread("./../data/lena.png")
+plt.imshow(img)
+# 画像処理のiris的存在 Lena 画像データ．
+
