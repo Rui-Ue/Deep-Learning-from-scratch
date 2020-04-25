@@ -17,3 +17,11 @@ my_dir/
 # cache of python
 __pycache__/
 
+# checkpoints of jupyter notebook
+.ipynb_checkpoints/
+
+# copy from official repository
+dataset/
+
+# pickle file
+*.pkl
