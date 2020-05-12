@@ -25,3 +25,7 @@ dataset/
 
 # pickle file
 *.pkl
+
+# PowerPoint file
+*.pptx
+
